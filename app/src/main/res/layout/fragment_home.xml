@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_one"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/home_logo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/logo"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/home_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="General Knowledge Quize"
+        android:textSize="25sp"
+        android:layout_below="@+id/home_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:textColor="@android:color/white"/>
+
+    <TextView
+        android:id="@+id/text_view_highscore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/home_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+        android:text="Highscore: 0"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+    <Spinner
+        android:id="@+id/spinner_Category"
+        android:layout_below="@+id/text_view_highscore"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"/>
+
+    <Button
+        android:id="@+id/button_continue_quiz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="play"
+        android:layout_below="@+id/spinner_Category"
+        android:textSize="25sp"
+        android:layout_marginTop="30dp"
+        android:textColor="@android:color/white"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/gradient_custom_button"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"/>
+
+</RelativeLayout>

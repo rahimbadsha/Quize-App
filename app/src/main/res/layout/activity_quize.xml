@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="5"
+    android:background="@android:color/white"
+    tools:context=".QuizeActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:background="@drawable/background_one"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/text_view_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:freezesText="true"
+                android:text="Score: 0"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/text_view_question_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:freezesText="true"
+                android:text="1/1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_view_countdown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:freezesText="true"
+                android:text="00:30"
+                android:textColor="@android:color/white"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <TextView
+                android:id="@+id/text_view_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/text_custom_style"
+                android:freezesText="true"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="30dp"
+                android:text="Here will be the question text\nHere will be the question text\nHere will be the question text"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/colorText" />
+
+            <ImageButton
+                android:id="@+id/question_bookmark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_view_question"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="-24dp"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/bookmark_background"
+                android:clickable="true"
+                android:padding="10dp"
+                android:src="@drawable/bookmark_icon" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.5"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <RadioGroup
+                android:id="@+id/radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true">
+
+                <RadioButton
+                    android:id="@+id/radio_button1"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="10dp"
+                    android:freezesText="true"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:text="option1"
+                    android:textColor="@color/colorText"
+                    android:textSize="18sp"
+                    android:background="@drawable/flat_custom_button"
+                    />
+
+                <RadioButton
+                    android:id="@+id/radio_button2"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="10dp"
+                    android:freezesText="true"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:text="option1"
+                    android:textColor="@color/colorText"
+                    android:textSize="18sp"
+                    android:background="@drawable/flat_custom_button"
+                    />
+
+                <RadioButton
+                    android:id="@+id/radio_button3"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="10dp"
+                    android:baselineAligned="false"
+                    android:freezesText="true"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:text="option1"
+                    android:textColor="@color/colorText"
+                    android:textSize="18sp"
+                    android:background="@drawable/flat_custom_button"
+                    />
+
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/button_confirm_next"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/radio_group"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/gradient_custom_button"
+                android:freezesText="true"
+                android:textColor="@android:color/white"
+                android:text="Next" />
+
+            <Button
+                android:id="@+id/button_question_share"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/radio_group"
+                android:layout_alignParentRight="false"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/gradient_custom_button"
+                android:freezesText="true"
+                android:textColor="@android:color/white"
+                android:text="Share" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

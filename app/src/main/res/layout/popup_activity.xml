@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/popup_relative_layout"
+    android:layout_gravity="center">
+
+    <ImageView
+        android:id="@+id/popup_logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/icon_xdpi"/>
+
+        <RelativeLayout
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:elevation="6dp"
+            android:paddingBottom="60dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:id="@+id/popup_content_layout"
+            android:layout_gravity="center"
+            android:background="@drawable/popup_background"
+            android:alpha="1">
+
+            <TextView
+                android:id="@+id/congrts_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Congrats!"
+                android:textColor="#343434"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:layout_centerHorizontal="true"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/description_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/congrts_text"
+                android:text="You have completed your quiz."
+                android:layout_centerHorizontal="true"
+                android:textColor="#343434"
+                android:textAlignment="center"
+                android:layout_marginTop="2dp"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/quiz_statistics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/description_text"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="10dp"
+                android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Incorrect"
+                                android:textAllCaps="true"
+                                android:textAlignment="center"
+                                android:layout_gravity="center"/>
+                            <TextView
+                                android:id="@+id/incorrect_answer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="21"
+                                android:textAllCaps="true"
+                                android:textAlignment="center"
+                                android:layout_gravity="center"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Correct"
+                                android:textAllCaps="true"
+                                android:textAlignment="center"
+                                android:layout_gravity="center"/>
+                            <TextView
+                                android:id="@+id/correct_answer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="21"
+                                android:textAllCaps="true"
+                                android:textAlignment="center"
+                                android:layout_gravity="center"/>
+
+                    </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/quiz_statistics2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/quiz_statistics"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="10dp"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Highscore"
+                        android:textAllCaps="true"
+                        android:textAlignment="center"
+                        android:layout_gravity="center"/>
+                    <TextView
+                        android:id="@+id/highscore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="21"
+                        android:textAllCaps="true"
+                        android:textAlignment="center"
+                        android:layout_gravity="center"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total"
+                        android:textAllCaps="true"
+                        android:textAlignment="center"
+                        android:layout_gravity="center"/>
+                    <TextView
+                        android:id="@+id/total_question"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="21"
+                        android:textAllCaps="true"
+                        android:textAlignment="center"
+                        android:layout_gravity="center"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button_popup_close"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/quiz_statistics2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/gradient_custom_button"
+                android:freezesText="true"
+                android:text="CLOSE"
+                android:textColor="@android:color/white" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
